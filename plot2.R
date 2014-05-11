@@ -11,6 +11,13 @@ data$Global_active_power <- as.numeric(data$Global_active_power)
 date.time.vec <- strptime(paste(data$Date, data$Time), format="%d/%m/%Y %H:%M:%S")
 data$date.time <- date.time.vec
 
+#plot2.dev <- png(filename="plot2.png", width = 480, height = 480)
+#with(data, plot(date.time,Global_active_power, type="l", xlab=",
+#ylab="Global Active Power (kilowatts)"))
+
+
 plot2.dev <- png(filename="plot2.png", width = 480, height = 480)
 with(data, plot(date.time,Global_active_power, type="l", xlab="",
-                ylab="
+                ylab="Global Active Power (kilowatts)"))
+
+dev.off()
